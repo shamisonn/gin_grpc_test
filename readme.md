@@ -14,7 +14,7 @@ to learn gin and grpc and golang programming
     - => generate go.sum
 - [x] investigate to apitest(when resp type is json)
     - use `steinfletcher/apitest` 
-    - see [](https://github.com/steinfletcher/apitest/blob/master/examples/gin/api_test.go)
+    - see [example](https://github.com/steinfletcher/apitest/blob/master/examples/gin/api_test.go)
     - but I use protcol buffer for future ;(
 - [ ] setup grpc
 - [ ] setup protocol buffer to makefile
