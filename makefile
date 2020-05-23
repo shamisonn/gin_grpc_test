@@ -10,7 +10,7 @@ run:
 
 .PHONY: build
 build:
-	$(GO) build $(TARGET) -o $(EXECUTE_FILENAME)
+	$(GO) build -o $(EXECUTE_FILENAME)
 
 .PHONY: clean
 clean:
