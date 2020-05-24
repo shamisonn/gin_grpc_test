@@ -1,0 +1,29 @@
+version: "3"
+services:
+  proxy:
+    build: 
+      context: "./proxy"
+      dockerfile: "envoy.Dockerfile"
+    ports:
+      - "8080:8080"
+    links:
+      - "server"
+  server:
+    build: 
+      context: "./server"
+      dockerfile: "go.Dockerfile"
+    volumes:
+        - "./server/:/go/src/grpc_test/server"
+    ports:
+      - "9090:9090"
+    container_name: "server"
+  client:
+    build: 
+      context: "./client"
+      dockerfile: "node.Dockerfile"
+    volumes:
+      - ./../client/src:/client/src
+      - ./../client/public:/client/public
+    ports:
+      - "3000:3000"
+
